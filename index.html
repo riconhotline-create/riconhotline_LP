@@ -36,6 +36,8 @@ body{
     "Yu Gothic",
     Meiryo,
     sans-serif;
+
+  -webkit-touch-callout:none;
 }
 
 
@@ -126,6 +128,11 @@ body{
   padding:0;
 
   border:0;
+
+  -webkit-user-select:none;
+  user-select:none;
+
+  -webkit-user-drag:none;
 }
 
 
@@ -180,17 +187,37 @@ body{
 /* FINAL green CTA */
 
 .final-hit{
-  left:19%;
-  right:18%;
+  left:17%;
+  right:17%;
 
-  top:72.2%;
-  height:7.1%;
+  top:72%;
+  height:7.5%;
 }
 
 
 .hit:focus-visible{
   outline:4px solid #1677ff;
   outline-offset:3px;
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final-section{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+}
+
+.final-section img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  margin:0;
+  padding:0;
 }
 
 
@@ -220,24 +247,6 @@ body{
 
 }
 
-/* =========================
-   FINAL SECTION ONLY
-========================= */
-
-.final-section{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-}
-
-.final-section img{
-  display:block;
-  width:133.333%;
-  max-width:none;
-  height:auto;
-  margin-left:-16.6665%;
-}
-  
 </style>
 </head>
 
@@ -256,6 +265,7 @@ body{
     <img
       src="header.png"
       alt="りこんほっとLINE LINEを追加する"
+      draggable="false"
     >
 
     <a
@@ -283,6 +293,7 @@ body{
     <img
       src="fv.png"
       alt="離婚しても大丈夫。そう思えるLINEに出会えた。"
+      draggable="false"
     >
 
     <a
@@ -301,6 +312,7 @@ body{
     <img
       src="features.png"
       alt="あなたのペースで必要なことを必要なときに。"
+      draggable="false"
     >
 
   </section>
@@ -313,6 +325,7 @@ body{
     <img
       src="line-section.png"
       alt="最初の一歩が未来を変えるきっかけに。LINEだから気軽に相談できる。"
+      draggable="false"
     >
 
     <a
@@ -331,6 +344,7 @@ body{
     <img
       src="steps.png"
       alt="完全匿名。かんたん3STEP。登録する、知って整理する、必要なら相談する。"
+      draggable="false"
     >
 
   </section>
@@ -338,11 +352,12 @@ body{
 
   <!-- FINAL -->
 
-  <section class="design-section　final-section">
+  <section class="design-section final-section">
 
     <img
       src="final.png"
       alt="決めるのは今じゃなくていい。まずは知ることから。"
+      draggable="false"
     >
 
     <a
