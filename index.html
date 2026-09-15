@@ -3,73 +3,353 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
 <title>りこんほっとLINE｜最初の一歩をはじめる</title>
+
 <meta name="description" content="夫婦問題の最初の一歩が見つかるLINE。診断・シミュレーション・情報収集・専門家への相談をLINEで。">
+
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#f5f5f5}
-body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+
+/* =========================
+   BASE
+========================= */
+
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  margin:0;
+  padding:0;
+  background:#f5f5f5;
+}
+
+body{
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Meiryo,
+    sans-serif;
+}
+
+
+/* =========================
+   FIXED HEADER
+========================= */
+
 .fixed-header{
- position:fixed;top:0;left:0;right:0;z-index:9999;
- background:#fff;box-shadow:0 1px 8px rgba(0,0,0,.06);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:9999;
+
+  background:#fff;
+  box-shadow:0 1px 8px rgba(0,0,0,.06);
 }
-.header-inner{position:relative;width:min(100%,750px);margin:0 auto}
-.header-inner img,.design-section img{display:block;width:100%;height:auto}
+
+.header-inner{
+  position:relative;
+
+  width:min(100%,750px);
+  margin:0 auto;
+
+  /* 元画像より少しコンパクトに表示 */
+  overflow:hidden;
+}
+
+.header-inner img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
 .page{
- width:min(100%,750px);margin:0 auto;background:#fff;
- padding-top:94px;overflow:hidden;
+  width:min(100%,750px);
+  margin:0 auto;
+
+  background:#fff;
+
+  /* ヘッダー縮小に合わせて調整 */
+  padding-top:82px;
+
+  overflow:hidden;
 }
-.design-section{position:relative;width:100%;line-height:0}
-.hit{position:absolute;display:block;z-index:5;border-radius:999px}
-.header-hit{left:51.7%;right:3%;top:16%;bottom:16%}
-/* FV: pink CTA */
-.fv-hit{left:3.1%;right:19.4%;top:33.45%;height:5.6%}
-/* CTA at top of LINE consultation section */
-.line-hit{left:.3%;right:.3%;top:3.55%;height:9.55%}
-/* Final green CTA; measured relative to the exported final section */
-.final-hit{left:19%;right:18%;top:72.2%;height:7.1%}
-.hit:focus-visible{outline:4px solid #1677ff;outline-offset:3px}
+
+
+/* =========================
+   IMAGE SECTIONS
+========================= */
+
+.design-section{
+  position:relative;
+  width:100%;
+  line-height:0;
+}
+
+.design-section img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+
+/* =========================
+   CLICK AREAS
+========================= */
+
+.hit{
+  position:absolute;
+  display:block;
+
+  z-index:5;
+
+  border-radius:999px;
+}
+
+.hit:focus-visible{
+  outline:4px solid #1677ff;
+  outline-offset:3px;
+}
+
+
+/* Header CTA */
+
+.header-hit{
+  left:51.7%;
+  right:3%;
+  top:16%;
+  bottom:16%;
+}
+
+
+/* FV pink CTA */
+
+.fv-hit{
+  left:3.1%;
+  right:19.4%;
+  top:33.45%;
+  height:5.6%;
+}
+
+
+/* =========================
+   LINE SECTION
+========================= */
+
+/*
+ line-section.png の上部には
+ 大きな白余白が画像そのものに入っているため、
+ 表示時に上側をクロップする。
+*/
+
+.line-section{
+  overflow:hidden;
+}
+
+.line-section img{
+  width:100%;
+
+  /*
+   上部の不要な白余白を画面外へ移動
+  */
+  margin-top:-31%;
+}
+
+
+/*
+ クロップ後の画像に合わせて
+ CTAクリック領域を再配置
+*/
+
+.line-hit{
+  left:.3%;
+  right:.3%;
+
+  top:2.3%;
+  height:11%;
+}
+
+
+/* =========================
+   FINAL SECTION
+========================= */
+
+.final-section{
+  margin-bottom:-1px;
+}
+
+
+/* Final green CTA */
+
+.final-hit{
+  left:19%;
+  right:18%;
+  top:72.2%;
+  height:7.1%;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:750px){
- .page{padding-top:12.533333vw}
+
+  /*
+   header.pngは750px幅基準。
+   元94px相当から少し小さくする。
+  */
+
+  .fixed-header .header-inner{
+    width:100%;
+  }
+
+  .page{
+    padding-top:11vw;
+  }
+
 }
+
+
+/* =========================
+   DESKTOP
+========================= */
+
 @media(min-width:751px){
- .page{box-shadow:0 0 26px rgba(0,0,0,.08)}
+
+  .page{
+    box-shadow:0 0 26px rgba(0,0,0,.08);
+  }
+
 }
+
 </style>
 </head>
+
+
 <body>
 
+
+<!-- =========================
+     FIXED HEADER
+========================= -->
+
 <header class="fixed-header">
- <div class="header-inner">
-  <img src="header.png" alt="りこんほっとLINE　LINEを追加する">
-  <a class="hit header-hit" href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy" aria-label="りこんほっとLINEを追加する"></a>
- </div>
+
+  <div class="header-inner">
+
+    <img
+      src="header.png"
+      alt="りこんほっとLINE　LINEを追加する"
+    >
+
+    <a
+      class="hit header-hit"
+      href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
+      aria-label="りこんほっとLINEを追加する"
+    ></a>
+
+  </div>
+
 </header>
 
+
+<!-- =========================
+     LP
+========================= -->
+
 <main class="page">
- <section class="design-section">
-  <img src="fv.png" alt="離婚しても大丈夫。そう思えるLINEに出会えた。こんなお悩みありませんか？">
-  <a class="hit fv-hit" href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy" aria-label="りこんほっとLINEで最初の一歩をはじめる"></a>
- </section>
 
- <section class="design-section">
-  <img src="features.png" alt="あなたのペースで必要なことを必要なときに。診断、お金、情報、相談。">
- </section>
 
- <section class="design-section">
-  <img src="line-section.png" alt="最初の一歩が未来を変えるきっかけに。LINEだから気軽に相談できる。">
-  <a class="hit line-hit" href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy" aria-label="りこんほっとLINEで最初の一歩をはじめる"></a>
- </section>
+  <!-- FV -->
 
- <section class="design-section">
-  <img src="steps.png" alt="完全匿名。かんたん3STEP。登録する、知って整理する、必要なら相談する。">
- </section>
+  <section class="design-section">
 
- <section class="design-section">
-  <img src="final.png" alt="決めるのは今じゃなくていい。まずは知ることから。">
-  <a class="hit final-hit" href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy" aria-label="りこんほっとLINEで最初の一歩をはじめる"></a>
- </section>
+    <img
+      src="fv.png"
+      alt="離婚しても大丈夫。そう思えるLINEに出会えた。こんなお悩みありませんか？"
+    >
+
+    <a
+      class="hit fv-hit"
+      href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
+      aria-label="りこんほっとLINEで最初の一歩をはじめる"
+    ></a>
+
+  </section>
+
+
+  <!-- FEATURES -->
+
+  <section class="design-section">
+
+    <img
+      src="features.png"
+      alt="あなたのペースで必要なことを必要なときに。診断、お金、情報、相談。"
+    >
+
+  </section>
+
+
+  <!-- LINE CONSULTATION -->
+
+  <section class="design-section line-section">
+
+    <img
+      src="line-section.png"
+      alt="最初の一歩が未来を変えるきっかけに。LINEだから気軽に相談できる。"
+    >
+
+    <a
+      class="hit line-hit"
+      href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
+      aria-label="りこんほっとLINEで最初の一歩をはじめる"
+    ></a>
+
+  </section>
+
+
+  <!-- 3 STEP -->
+
+  <section class="design-section">
+
+    <img
+      src="steps.png"
+      alt="完全匿名。かんたん3STEP。登録する、知って整理する、必要なら相談する。"
+    >
+
+  </section>
+
+
+  <!-- FINAL -->
+
+  <section class="design-section final-section">
+
+    <img
+      src="final.png"
+      alt="決めるのは今じゃなくていい。まずは知ることから。"
+    >
+
+    <a
+      class="hit final-hit"
+      href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
+      aria-label="りこんほっとLINEで最初の一歩をはじめる"
+    ></a>
+
+  </section>
+
+
 </main>
+
 
 </body>
 </html>
