@@ -2,17 +2,20 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+>
 
 <title>りこんほっとLINE｜最初の一歩をはじめる</title>
 
-<meta name="description" content="夫婦問題の最初の一歩が見つかるLINE。診断・シミュレーション・情報収集・専門家への相談をLINEで。">
+<meta
+  name="description"
+  content="夫婦問題の最初の一歩が見つかるLINE。診断・シミュレーション・情報収集・専門家への相談をLINEで。"
+>
 
 <style>
-
-/* =========================
-   BASE
-========================= */
 
 *{
   box-sizing:border-box;
@@ -22,7 +25,7 @@ html,
 body{
   margin:0;
   padding:0;
-  background:#f5f5f5;
+  background:#fff;
 }
 
 body{
@@ -48,23 +51,30 @@ body{
   z-index:9999;
 
   background:#fff;
-  box-shadow:0 1px 8px rgba(0,0,0,.06);
+
+  box-shadow:
+    0 1px 8px rgba(0,0,0,.06);
 }
 
 .header-inner{
   position:relative;
 
-  width:min(100%,750px);
+  width:100%;
+  max-width:750px;
+
   margin:0 auto;
 
-  /* 元画像より少しコンパクトに表示 */
-  overflow:hidden;
+  line-height:0;
 }
 
 .header-inner img{
   display:block;
+
   width:100%;
   height:auto;
+
+  margin:0;
+  padding:0;
 }
 
 
@@ -73,32 +83,49 @@ body{
 ========================= */
 
 .page{
-  width:min(100%,750px);
+  width:100%;
+  max-width:750px;
+
   margin:0 auto;
+  padding:94px 0 0;
 
   background:#fff;
-
-  /* ヘッダー縮小に合わせて調整 */
-  padding-top:82px;
 
   overflow:hidden;
 }
 
 
 /* =========================
-   IMAGE SECTIONS
+   ALL IMAGE SECTIONS
 ========================= */
 
 .design-section{
   position:relative;
+
+  display:block;
+
   width:100%;
+
+  margin:0;
+  padding:0;
+
   line-height:0;
+
+  overflow:hidden;
 }
 
 .design-section img{
   display:block;
+
   width:100%;
   height:auto;
+
+  max-width:none;
+
+  margin:0;
+  padding:0;
+
+  border:0;
 }
 
 
@@ -108,24 +135,21 @@ body{
 
 .hit{
   position:absolute;
+
   display:block;
 
-  z-index:5;
+  z-index:10;
 
   border-radius:999px;
 }
 
-.hit:focus-visible{
-  outline:4px solid #1677ff;
-  outline-offset:3px;
-}
 
-
-/* Header CTA */
+/* header green CTA */
 
 .header-hit{
   left:51.7%;
   right:3%;
+
   top:16%;
   bottom:16%;
 }
@@ -136,91 +160,37 @@ body{
 .fv-hit{
   left:3.1%;
   right:19.4%;
+
   top:33.45%;
   height:5.6%;
 }
 
 
-/* =========================
-   LINE SECTION
-========================= */
-
-/*
- line-section.png の上部には
- 大きな白余白が画像そのものに入っているため、
- 表示時に上側をクロップする。
-*/
-
-.line-section{
-  overflow:hidden;
-}
-
-.line-section img{
-  width:100%;
-
-  /*
-   上部の不要な白余白を画面外へ移動
-  */
-  margin-top:-31%;
-}
-
-
-/*
- クロップ後の画像に合わせて
- CTAクリック領域を再配置
-*/
+/* LINE section pink CTA */
 
 .line-hit{
   left:.3%;
   right:.3%;
 
-  top:2.3%;
-  height:11%;
+  top:3.55%;
+  height:9.55%;
 }
 
 
-/* =========================
-   FINAL SECTION
-========================= */
-
-/* =========================
-   FINAL SECTION
-========================= */
-
-.final-section{
-  position:relative;
-  width:100%;
-  overflow:hidden;
-  margin:0;
-  padding:0;
-}
-
-.final-section img{
-  display:block;
-
-  width:125%;
-  max-width:none;
-  height:auto;
-
-  margin-left:-12.5%;
-}
-
-/* Final green CTA */
-.final-hit{
-  left:4.8%;
-  right:4.8%;
-  top:72.2%;
-  height:7.1%;
-}
-
-
-/* Final green CTA */
+/* FINAL green CTA */
 
 .final-hit{
   left:19%;
   right:18%;
+
   top:72.2%;
   height:7.1%;
+}
+
+
+.hit:focus-visible{
+  outline:4px solid #1677ff;
+  outline-offset:3px;
 }
 
 
@@ -230,30 +200,22 @@ body{
 
 @media(max-width:750px){
 
-  /*
-   header.pngは750px幅基準。
-   元94px相当から少し小さくする。
-  */
-
-  .fixed-header .header-inner{
-    width:100%;
-  }
-
   .page{
-    padding-top:11vw;
+    padding-top:12.533333vw;
   }
 
 }
 
 
 /* =========================
-   DESKTOP
+   PC
 ========================= */
 
 @media(min-width:751px){
 
   .page{
-    box-shadow:0 0 26px rgba(0,0,0,.08);
+    box-shadow:
+      0 0 26px rgba(0,0,0,.08);
   }
 
 }
@@ -275,7 +237,7 @@ body{
 
     <img
       src="header.png"
-      alt="りこんほっとLINE　LINEを追加する"
+      alt="りこんほっとLINE LINEを追加する"
     >
 
     <a
@@ -290,7 +252,7 @@ body{
 
 
 <!-- =========================
-     LP
+     MAIN
 ========================= -->
 
 <main class="page">
@@ -302,13 +264,13 @@ body{
 
     <img
       src="fv.png"
-      alt="離婚しても大丈夫。そう思えるLINEに出会えた。こんなお悩みありませんか？"
+      alt="離婚しても大丈夫。そう思えるLINEに出会えた。"
     >
 
     <a
       class="hit fv-hit"
       href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
-      aria-label="りこんほっとLINEで最初の一歩をはじめる"
+      aria-label="最初の一歩をはじめる"
     ></a>
 
   </section>
@@ -320,7 +282,7 @@ body{
 
     <img
       src="features.png"
-      alt="あなたのペースで必要なことを必要なときに。診断、お金、情報、相談。"
+      alt="あなたのペースで必要なことを必要なときに。"
     >
 
   </section>
@@ -328,7 +290,7 @@ body{
 
   <!-- LINE CONSULTATION -->
 
-  <section class="design-section line-section">
+  <section class="design-section">
 
     <img
       src="line-section.png"
@@ -338,7 +300,7 @@ body{
     <a
       class="hit line-hit"
       href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
-      aria-label="りこんほっとLINEで最初の一歩をはじめる"
+      aria-label="最初の一歩をはじめる"
     ></a>
 
   </section>
@@ -358,7 +320,7 @@ body{
 
   <!-- FINAL -->
 
-  <section class="design-section final-section">
+  <section class="design-section">
 
     <img
       src="final.png"
@@ -368,7 +330,7 @@ body{
     <a
       class="hit final-hit"
       href="https://liff.line.me/2006554413-HY306bDy/landing?follow=%40347rsnzd&lp=3m4kah&liff_id=2006554413-HY306bDy"
-      aria-label="りこんほっとLINEで最初の一歩をはじめる"
+      aria-label="最初の一歩をはじめる"
     ></a>
 
   </section>
