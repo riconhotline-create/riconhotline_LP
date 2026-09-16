@@ -21,6 +21,11 @@ body{
   -webkit-touch-callout:none;
 }
 
+
+/* =========================
+   FIXED HEADER
+========================= */
+
 .fixed-header{
   position:fixed;
   top:0;
@@ -45,6 +50,20 @@ body{
   height:auto;
 }
 
+.header-hit{
+  position:absolute;
+  left:84%;
+  right:3%;
+  top:12%;
+  bottom:12%;
+  z-index:10;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
 .page{
   width:100%;
   max-width:750px;
@@ -57,44 +76,94 @@ body{
   display:block;
   width:100%;
   height:auto;
+
   -webkit-user-select:none;
   user-select:none;
   -webkit-user-drag:none;
 }
 
-.header-hit{
+
+/* =========================
+   LEGAL IMAGE LINKS
+========================= */
+
+.legal-image{
+  position:relative;
+  width:100%;
+  line-height:0;
+}
+
+.legal-image img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.legal-hit{
   position:absolute;
-  left:84%;
-  right:3%;
-  top:12%;
-  bottom:12%;
+  display:block;
   z-index:10;
 }
 
-.legal-links{
-  text-align:center;
-  padding:25px 15px 8px;
-  font-size:14px;
-  line-height:2;
+/* privacy.png 下部の3リンク */
+
+.privacy-link{
+  left:30%;
+  width:40%;
+  bottom:5.8%;
+  height:2%;
 }
 
-.legal-links a{
-  color:#444;
-  text-decoration:none;
-  margin:0 8px;
+.transactions-link{
+  left:25%;
+  width:50%;
+  bottom:3.7%;
+  height:2%;
 }
+
+.terms-link{
+  left:35%;
+  width:30%;
+  bottom:1.6%;
+  height:2%;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-home{
+  display:block;
+  width:100%;
+  line-height:0;
+}
+
+.footer-home img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:750px){
   .page{
     padding-top:16.533333vw;
   }
 }
+
 </style>
 </head>
+
 
 <body>
 
 <header class="fixed-header">
+
   <div class="header-inner">
 
     <img
@@ -110,21 +179,63 @@ body{
     ></a>
 
   </div>
+
 </header>
+
 
 <main class="page">
 
- <img
-    src="privacy.png"
-    alt="りこんほっとLINE プライバシーポリシー"
-    draggable="false"
+
+  <!-- プライバシーポリシー -->
+
+  <div class="legal-image">
+
+    <img
+      src="privacy.png"
+      alt="りこんほっとLINE プライバシーポリシー"
+      draggable="false"
+    >
+
+    <!-- 個人情報保護法 -->
+    <a
+      class="legal-hit privacy-link"
+      href="privacy.html"
+      aria-label="個人情報保護法"
+    ></a>
+
+    <!-- 特定商取引に基づく表記 -->
+    <a
+      class="legal-hit transactions-link"
+      href="transactions.html"
+      aria-label="特定商取引に基づく表記"
+    ></a>
+
+    <!-- 利用規約 -->
+    <a
+      class="legal-hit terms-link"
+      href="terms.html"
+      aria-label="利用規約"
+    ></a>
+
+  </div>
+
+
+  <!-- 共通フッター -->
+
+  <a
+    class="footer-home"
+    href="index.html"
+    aria-label="りこんほっとLINEトップページへ戻る"
   >
-  <a href="index.html" aria-label="りこんほっとLINEトップページへ戻る">
-  <img
-    src="footer.png"
-    alt="りこんほっとLINE公式"
-    draggable="false"
-  >
+
+    <img
+      src="footer.png"
+      alt="りこんほっとLINE公式"
+      draggable="false"
+    >
+
+  </a>
+
 
 </main>
 
