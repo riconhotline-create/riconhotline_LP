@@ -15,6 +15,21 @@
   content="夫婦問題の最初の一歩が見つかるLINE。診断・シミュレーション・情報収集・専門家への相談をLINEで。"
 >
 
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6BH55L81F"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-P6BH55L81F');
+</script>
+  
 <style>
 
 *{
@@ -439,9 +454,54 @@ body{
 
   </section>
 
-
 </main>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+  const ctaButtons = [
+    {
+      selector: '.header-hit',
+      position: 'header'
+    },
+    {
+      selector: '.fv-hit',
+      position: 'fv'
+    },
+    {
+      selector: '.line-hit',
+      position: 'middle'
+    },
+    {
+      selector: '.final-hit',
+      position: 'final'
+    }
+  ];
+
+  ctaButtons.forEach(function(cta){
+
+    const button = document.querySelector(cta.selector);
+
+    if(button){
+
+      button.addEventListener('click', function(){
+
+        gtag('event', 'line_cta_click', {
+          cta_position: cta.position,
+          page_location: window.location.href
+        });
+
+      });
+
+    }
+
+  });
+
+});
+</script>
 
 
 </body>
 </html>
+
